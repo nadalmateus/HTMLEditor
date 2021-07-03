@@ -10,9 +10,12 @@ namespace HTMLEditor
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.ForegroundColor = ConsoleColor.Black;
             DrawnScreen();
+            WriteOptions();
+            var options = short.Parse(Console.ReadLine());
         }
 
         public static void DrawnScreen()
+
         {
             Console.Write("+");
             for (int i = 0; i <= 30; i++)
@@ -30,10 +33,26 @@ namespace HTMLEditor
 
                 Console.Write("|");
                 Console.Write("\n");
-
-
             }
 
+
+        }
+        public static void WriteOptions()
+        {
+            Console.SetCursorPosition(3, 2);
+            Console.Write("Editor HTML");
+            Console.SetCursorPosition(3, 3);
+            Console.Write("==============================");
+            Console.SetCursorPosition(3, 4);
+            Console.WriteLine("Selecione uma opção abaixo");
+            Console.SetCursorPosition(3, 6);
+            Console.Write("1 - Criar um novo arquivo");
+            Console.SetCursorPosition(3, 7);
+            Console.Write("2 - Editar um arquivo existente");
+            Console.SetCursorPosition(3, 8);
+            Console.Write("3 - Sair");
+            Console.SetCursorPosition(3, 10);
+            Console.Write("");
 
         }
     }
