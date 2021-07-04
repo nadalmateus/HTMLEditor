@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
 
 namespace HTMLEditor
 {
@@ -12,6 +14,7 @@ namespace HTMLEditor
             DrawnScreen();
             WriteOptions();
             var options = short.Parse(Console.ReadLine());
+            HandleMenuOption(options);
         }
 
         public static void DrawnScreen()
@@ -55,5 +58,22 @@ namespace HTMLEditor
             Console.Write("");
 
         }
+        public static void HandleMenuOption(short options)
+        {
+            switch (options)
+            {
+                case 1: Console.WriteLine("Editor"); break;
+                case 2: Console.WriteLine("View"); break;
+                case 0:
+                    {
+                        Console.Clear();
+                        Environment.Exit(0);
+                        break;
+                    }
+                default: Show(); break;
+            }
+        }
+
+
     }
 }
