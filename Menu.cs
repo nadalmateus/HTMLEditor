@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace HTMLEditor
 {
@@ -61,7 +62,7 @@ namespace HTMLEditor
             switch (options)
             {
                 case 1: Editor.Show(); break;
-                case 2: Console.WriteLine("View"); break;
+                case 2:; break;
                 case 0:
                     {
                         Console.Clear();

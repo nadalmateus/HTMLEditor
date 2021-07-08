@@ -23,6 +23,7 @@ namespace HTMLEditor
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
             Console.WriteLine("___________");
             Console.WriteLine("Deseja salvar o arquivo?");
+            Viewer.Show(file.ToString());
             Console.WriteLine("1 - Sim");
             Console.WriteLine("2 - Não");
 
