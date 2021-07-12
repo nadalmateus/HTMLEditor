@@ -23,7 +23,32 @@ namespace HTMLEditor
         public static void Replace(string text)
         {
             var strong = new Regex(@"<\s*<strong[^a]*>(.*?)<\s*/\*strong>");
-            Console.WriteLine(strong);
+            var worlds = text.Split(' ');
+            for (int i = 0; i < worlds.Length; i++)
+            {
+                if (strong.IsMatch(worlds[i]))
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write(
+                        worlds[i].Substring(
+                            worlds[1].IndexOf('>') + 1,
+                              (
+                                  (worlds[1].LastIndexOf('>') + -1) -
+                              worlds[1].LastIndexOf('>')
+                             )
+                        )
+
+                    );
+                    Console.Write(" ");
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.Write(worlds[i]);
+                        Console.Write(" ");
+                    }
+
+                }
+            }
         }
     }
 }
