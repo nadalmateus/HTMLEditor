@@ -39,7 +39,7 @@ namespace HTMLEditor
                         )
 
                     );
-                    Console.Write(" ")
+                    Console.Write(" ");
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Black;
